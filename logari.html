@@ -2,6 +2,7 @@
 <html>
 
 <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Logarithmic Line Chart</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
     <style>
@@ -44,20 +45,65 @@
                     { x: 14, y: 14 },
                     { x: 15, y: 15 }
                 ]
-            }]
+            },{
+                label: 'bst',
+                backgroundColor: 'black',
+                borderColor: 'black',
+                fill: false,
+                data: [
+                    { x: 1, y: 1 },
+                    { x: 2, y: 3 },
+                    { x: 3, y: 3 },
+                    { x: 4, y: 4 },
+                    { x: 5, y: 65 },
+                    { x: 6, y: 656 },
+                    { x: 7, y: 7 },
+                    { x: 8, y: 8 },
+                    { x: 9, y: 9 },
+                    { x: 10, y: 10 },
+                    { x: 11, y: 11 },
+                    { x: 12, y: 12 },
+                    { x: 13, y: 15 },
+                    { x: 14, y: 15 },
+                    { x: 15, y: 15 }
+                    
+                ]
+
+
+            }
+
+            
+            
+            
+            ]
         },
-        options: {
-            responsive: true,
-            title: {
-                display: true,
-                text: ''
-            },
-            scales: {
-                xAxes: [{
-                    type: 'logarithmic'
+        options: {   
+                   scales: {
+                   xAxes: [{
+                    
+                    type:'logarithmic'
+                    
+                }],
+                yAxes: [{
+                     type: 'logarithmic',
+                    ticks: {
+                        beginAtZero: true
+                    },
+                    scaleLabel: {
+                        display: true,
+                        labelString: 'y축',
+                        
+                        fontSize: 20,
+
+
+                        
+                    }
+                    
+                    
                 }]
             }
         }
+            
     };
 
     window.onload = function () {
